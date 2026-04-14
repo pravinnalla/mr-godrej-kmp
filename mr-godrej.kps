@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<KeymanPackage>
+<Package>
   <Options>
     <Name>mr-godrej keyboard</Name>
     <Version>1.0</Version>
@@ -18,4 +18,4 @@
       </Files>
     </Keyboard>
   </Keyboards>
-</KeymanPackage>
+</Package>
