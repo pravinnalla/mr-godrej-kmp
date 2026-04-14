@@ -20,7 +20,7 @@ jobs:
       - name: Install Keyman Compiler
         run: npm install -g @keymanapp/kmc
 
-      - name: Force clean keyboard file
+      - name: Create clean KMN file
         run: |
           cat > mr-godrej.kmn << 'EOF'
 store(&VERSION) "10.0"
@@ -34,16 +34,16 @@ group(main) using keys
 'a' > 'अ'
 EOF
 
-      - name: Debug file content
-        run: cat -A mr-godrej.kmn
+      - name: Show file
+        run: cat mr-godrej.kmn
 
-      - name: Build KMN
+      - name: Build keyboard
         run: kmc build mr-godrej.kmn
 
-      - name: Build KPS
+      - name: Build package
         run: kmc build mr-godrej.kps
 
-      - name: Upload artifact
+      - name: Upload output
         uses: actions/upload-artifact@v4
         with:
           name: mr-godrej-keyboard
