@@ -1,8 +1,8 @@
-c Minimal Marathi Keyboard
+c Minimal Marathi Keyboard (Stable KMN)
 
-store(&VERSION) 10.0
-store(&NAME) "MR_Godrej_Minimal"
-store(&TARGETS) "windows"
+store(&VERSION) '10.0'
+store(&NAME) 'MR_Godrej_Minimal'
+store(&TARGETS) 'windows'
 
 begin Unicode > use(main)
 
@@ -30,3 +30,5 @@ group(main) using keys
 + 'v' > 'व'
 + 's' > 'स'
 + 'h' > 'ह'
+
++ '.' > '।'
