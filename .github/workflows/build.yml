@@ -26,8 +26,8 @@ jobs:
       - name: Verify files
         run: ls -la
 
-      - name: Compile KMN to KMX
-        run: kmc compile mr-godrej.kmn
+      - name: Build KMX from KMN
+        run: kmc build mr-godrej.kmn
 
       - name: Build KMP package
         run: kmc build mr-godrej.kps
