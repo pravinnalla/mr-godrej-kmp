@@ -1,6 +1,6 @@
-c Minimal Marathi Godrej Keyboard - Stable Base
+c Minimal Marathi Godrej Keyboard - Fixed Version
 
-store(&VERSION) '1.0'
+store(&VERSION) 10.0
 store(&NAME) 'MR Godrej Minimal'
 store(&TARGETS) 'windows'
 
@@ -52,7 +52,7 @@ c --------------------
 + 'h' > 'ह'
 
 c --------------------
-c BASIC SYMBOLS
+c SYMBOLS
 c --------------------
 + '.' > '।'
 + '-' > '-'
