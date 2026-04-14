@@ -1,0 +1,26 @@
+name: Build KMP
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Keyman Compiler
+      run: npm install -g @keymanapp/kmc
+
+    - name: Build keyboard
+      run: |
+        kmc compile mr-godrej.kmn
+        kmc build mr-godrej.kps
+
+    - name: Upload KMP
+      uses: actions/upload-artifact@v3
+      with:
+        name: mr-godrej-kmp
+        path: "*.kmp"
