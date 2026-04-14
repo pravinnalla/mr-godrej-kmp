@@ -1,0 +1,32 @@
+c Minimal Marathi Keyboard
+
+store(&VERSION) 10.0
+store(&NAME) "MR_Godrej_Minimal"
+store(&TARGETS) "windows"
+
+begin Unicode > use(main)
+
+group(main) using keys
+
++ 'a' > 'अ'
++ 'i' > 'इ'
++ 'u' > 'उ'
++ 'e' > 'ए'
++ 'o' > 'ओ'
+
++ 'k' > 'क'
++ 'g' > 'ग'
++ 'c' > 'च'
++ 'j' > 'ज'
++ 't' > 'त'
++ 'd' > 'द'
++ 'n' > 'न'
++ 'p' > 'प'
++ 'b' > 'ब'
++ 'm' > 'म'
++ 'y' > 'य'
++ 'r' > 'र'
++ 'l' > 'ल'
++ 'v' > 'व'
++ 's' > 'स'
++ 'h' > 'ह'
