@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Package>
-  <Options>
-    <Name>mr-godrej keyboard</Name>
-    <Version>1.0</Version>
-  </Options>
+<KeymanPackage format="2.0">
+
+  <Info>
+    <Name>Marathi Godrej Remington</Name>
+    <Author>You</Author>
+    <Version>10.0</Version>
+  </Info>
 
   <Keyboards>
-    <Keyboard>
-      <Name>mr-godrej</Name>
-      <ID>mr-godrej</ID>
-      <Version>1.0</Version>
-      <Languages>
-        <Language ID="mr-Deva"/>
-      </Languages>
-      <Files>
-        <File Name="mr-godrej.kmx"/>
-      </Files>
-    </Keyboard>
+    <Keyboard Id="mr-godrej" Filename="mr-godrej.kmx" />
   </Keyboards>
-</Package>
+
+  <Files>
+    <File>mr-godrej.kmx</File>
+  </Files>
+
+</KeymanPackage>
