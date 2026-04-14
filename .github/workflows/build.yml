@@ -4,39 +4,41 @@ on:
   push:
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: 24
 
-      - name: Install Keyman Compiler
+      - name: Install Keyman Compiler (kmc)
         run: npm install -g @keymanapp/kmc
 
-      - name: Verify repo files
-        run: |
-          echo "=== FILE LIST ==="
-          ls -R
+      - name: Show files (debug)
+        run: ls -la
 
-      - name: Build keyboard project
-        run: |
-          kmc build mr-godrej.kps
+      - name: Build keyboard (.kmn → .kmx)
+        run: kmc build mr-godrej.kmn
 
-      - name: Verify build output
-        run: ls -R
+      - name: Verify .kmx output
+        run: ls -la *.kmx || true
 
-      - name: Upload KMP package
+      - name: Build package (.kps → .kmp)
+        run: kmc build mr-godrej.kps
+
+      - name: Verify package output
+        run: ls -la *.kmp || true
+
+      - name: Upload KMP artifact
         uses: actions/upload-artifact@v4
         with:
           name: mr-godrej-keyboard
-          path: "*.kmp"
+          path: |
+            *.kmp
+            *.kmx
