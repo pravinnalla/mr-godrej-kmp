@@ -1,8 +1,7 @@
-c Marathi Godrej Remington Keyboard - Fully Fixed Version
+c Marathi Godrej Remington Keyboard - FINAL WORKING VERSION
 
 store(&VERSION) '10.0'
 store(&NAME) 'Marathi Godrej Remington Final'
-store(&TARGETS) 'windows web android ios linux'
 
 begin Unicode > use(main)
 
@@ -99,7 +98,7 @@ c ---------------------------
 + 'y' > 'ल'
 + 'o' > 'व'
 + 'l' > 'स'
-+ "'" > 'श'
++ ''' > 'श'
 + '"' > 'ष'
 + 'g' > 'ह'
 + 'G' > 'ळ'
@@ -160,4 +159,4 @@ c ---------------------------
 c ---------------------------
 c FINAL FALLBACK (MUST BE LAST)
 c ---------------------------
-+ any(key) > index(key, 1)
++ any(key) > context
