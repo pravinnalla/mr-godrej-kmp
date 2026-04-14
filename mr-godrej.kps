@@ -13,10 +13,9 @@
       <Languages>
         <Language ID="mr-Deva"/>
       </Languages>
+      <Files>
+        <File Name="mr-godrej.kmn"/>
+      </Files>
     </Keyboard>
   </Keyboards>
-
-  <Files>
-    <File Name="mr-godrej.kmn" Description="Keyboard source"/>
-  </Files>
 </KeymanPackage>
