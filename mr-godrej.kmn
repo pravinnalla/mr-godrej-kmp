@@ -2,7 +2,7 @@ c Marathi Godrej Remington Keyboard - Fully Fixed Version
 
 store(&VERSION) '10.0'
 store(&NAME) 'Marathi Godrej Remington Final'
-store(&TARGETS) 'windows macos linux'
+store(&TARGETS) 'windows web android ios linux'
 
 begin Unicode > use(main)
 
