@@ -1,4 +1,4 @@
-c Marathi Godrej Remington Keyboard - Clean Build (Fixed)
+c Marathi Godrej Remington Keyboard - Final Clean Build
 
 store(&VERSION) '10.0'
 store(&NAME) 'Marathi Godrej Remington Clean'
@@ -34,7 +34,7 @@ c ---------------------------
 + [K_NUMPAD0] > U+0966
 
 c ---------------------------
-c VOWELS (SINGLE KEY ONLY)
+c VOWELS
 c ---------------------------
 + 'v' > 'अ'
 + 'b' > 'इ'
@@ -86,32 +86,34 @@ c ---------------------------
 + 'l' > 'स'
 + 'g' > 'ह'
 + 'G' > 'ळ'
+
 c ---------------------------
-c SPECIAL LETTERS (FIXED)
+c SPECIAL LETTERS
 c ---------------------------
 + "'" > 'श'
 + '"' > 'ष'
+
 c ---------------------------
 c HALANT
 c ---------------------------
 + '`' > '्'
 
 c ---------------------------
-c SIMPLE COMBINATIONS (2-STEP SAFE)
+c SYLLABLE FORMATION (SAFE CONTEXT)
 c ---------------------------
-+ 'd' + 'k' > 'का'
-+ 'x' + 'k' > 'गा'
-+ 'p' + 'k' > 'चा'
-+ 't' + 'k' > 'जा'
-+ 'r' + 'k' > 'ता'
-+ 'n' + 'k' > 'दा'
-+ 'i' + 'k' > 'पा'
-+ 'c' + 'k' > 'बा'
-+ 'e' + 'k' > 'मा'
-+ 'y' + 'k' > 'ला'
-+ 'o' + 'k' > 'वा'
-+ 'l' + 'k' > 'सा'
-+ 'g' + 'k' > 'हा'
++ context 'क' + 'k' > 'का'
++ context 'ग' + 'k' > 'गा'
++ context 'च' + 'k' > 'चा'
++ context 'ज' + 'k' > 'जा'
++ context 'त' + 'k' > 'ता'
++ context 'द' + 'k' > 'दा'
++ context 'प' + 'k' > 'पा'
++ context 'ब' + 'k' > 'बा'
++ context 'म' + 'k' > 'मा'
++ context 'ल' + 'k' > 'ला'
++ context 'व' + 'k' > 'वा'
++ context 'स' + 'k' > 'सा'
++ context 'ह' + 'k' > 'हा'
 
 c ---------------------------
 c RA HANDLING
@@ -122,9 +124,9 @@ c ---------------------------
 c ---------------------------
 c CONJUNCTS
 c ---------------------------
-+ '=' + 'k' > 'त्र'
-+ '{' + 'k' > 'क्ष'
-+ 'K' + 'k' > 'ज्ञ'
++ context 'त' + '्' + 'र' > 'त्र'
++ context 'क' + '्' + 'ष' > 'क्ष'
++ context 'ज' + '्' + 'ञ' > 'ज्ञ'
 + 'J' > 'श्र'
 
 c ---------------------------
@@ -136,6 +138,6 @@ c ---------------------------
 + '&' > '-'
 
 c ---------------------------
-c FALLBACK (REQUIRED)
+c FALLBACK
 c ---------------------------
 + any(*) > context
