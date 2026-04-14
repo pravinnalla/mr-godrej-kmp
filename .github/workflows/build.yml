@@ -18,21 +18,24 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install Keyman Compiler
         run: npm install -g @keymanapp/kmc
 
-      - name: Verify files
-        run: ls -la
+      - name: Verify repo files
+        run: |
+          echo "=== FILE LIST ==="
+          ls -R
 
-      - name: Build KMX from KMN
-        run: kmc build mr-godrej.kmn
+      - name: Build keyboard project
+        run: |
+          kmc build mr-godrej.kps
 
-      - name: Build KMP package
-        run: kmc build mr-godrej.kps
+      - name: Verify build output
+        run: ls -R
 
-      - name: Upload KMP
+      - name: Upload KMP package
         uses: actions/upload-artifact@v4
         with:
           name: mr-godrej-keyboard
