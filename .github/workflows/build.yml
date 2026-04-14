@@ -35,15 +35,18 @@ group(main) using keys
 EOF
 
       - name: Show file
-        run: cat mr-godrej.kmn
+        run: |
+          cat mr-godrej.kmn
 
-      - name: Build keyboard
-        run: kmc build mr-godrej.kmn
+      - name: Build KMN
+        run: |
+          kmc build mr-godrej.kmn
 
-      - name: Build package
-        run: kmc build mr-godrej.kps
+      - name: Build KPS
+        run: |
+          kmc build mr-godrej.kps
 
-      - name: Upload output
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: mr-godrej-keyboard
