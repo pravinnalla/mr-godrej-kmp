@@ -2,7 +2,7 @@ store(&VERSION) "10.0"
 store(&NAME) "mr-godrej"
 store(&TARGETS) "windows"
 
-begin Unicode > use(main)
+begin Unicode>use(main)
 
 group(main) using keys
 
