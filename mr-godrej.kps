@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KeymanPackage>
+  <Options>
+    <Name>mr-godrej keyboard</Name>
+    <Version>1.0</Version>
+  </Options>
+
+  <Keyboards>
+    <Keyboard>
+      <Name>mr-godrej</Name>
+      <ID>mr-godrej</ID>
+      <Version>1.0</Version>
+      <Languages>
+        <Language ID="mr-Deva"/>
+      </Languages>
+    </Keyboard>
+  </Keyboards>
+
+  <Files>
+    <File Name="mr-godrej.kmn" Description="Keyboard source"/>
+  </Files>
+</KeymanPackage>
