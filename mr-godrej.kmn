@@ -1,4 +1,4 @@
-c Marathi Godrej Remington Keyboard - Final Stable Build
+c Marathi Godrej Remington Keyboard - Final Stable Build (Fixed)
 
 store(&VERSION) '10.0'
 store(&NAME) 'Marathi Godrej Remington Final'
@@ -99,35 +99,30 @@ c ---------------------------
 + '`' > '्'
 
 c ---------------------------
-c SYLLABLE FORMATION
+c SYLLABLE FORMATION (SAFE VERSION)
 c ---------------------------
-+ context 'क' + 'k' > 'का'
-+ context 'ग' + 'k' > 'गा'
-+ context 'च' + 'k' > 'चा'
-+ context 'ज' + 'k' > 'जा'
-+ context 'त' + 'k' > 'ता'
-+ context 'द' + 'k' > 'दा'
-+ context 'प' + 'k' > 'पा'
-+ context 'ब' + 'k' > 'बा'
-+ context 'म' + 'k' > 'मा'
-+ context 'ल' + 'k' > 'ला'
-+ context 'व' + 'k' > 'वा'
-+ context 'स' + 'k' > 'सा'
-+ context 'ह' + 'k' > 'हा'
++ 'क' + 'k' > 'का'
++ 'ग' + 'k' > 'गा'
++ 'च' + 'k' > 'चा'
++ 'ज' + 'k' > 'जा'
++ 'त' + 'k' > 'ता'
++ 'द' + 'k' > 'दा'
++ 'प' + 'k' > 'पा'
++ 'ब' + 'k' > 'बा'
++ 'म' + 'k' > 'मा'
++ 'ल' + 'k' > 'ला'
++ 'व' + 'k' > 'वा'
++ 'स' + 'k' > 'सा'
++ 'ह' + 'k' > 'हा'
 
 c ---------------------------
-c RA HANDLING
+c CONJUNCTS (FINAL SAFE FIX)
 c ---------------------------
-+ 'Z' > 'र्'
-+ 'z' > '्र'
-
-c ---------------------------
-c CONJUNCTS (FINAL FIX)
-c ---------------------------
-+ context 'त्' + 'r' > 'त्र'
-+ context 'क्' + 'S' > 'क्ष'
-+ context 'ज्' + 'Y' > 'ज्ञ'
++ 'त्' 'र' > 'त्र'
++ 'क्' 'ष' > 'क्ष'
++ 'ज्' 'ञ' > 'ज्ञ'
 + 'J' > 'श्र'
+
 c ---------------------------
 c SPECIAL
 c ---------------------------
