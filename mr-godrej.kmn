@@ -1,7 +1,7 @@
-c Marathi Godrej Remington Keyboard - Final Clean Build
+c Marathi Godrej Remington Keyboard - Final Stable Build
 
 store(&VERSION) '10.0'
-store(&NAME) 'Marathi Godrej Remington Clean'
+store(&NAME) 'Marathi Godrej Remington Final'
 store(&TARGETS) 'windows'
 
 begin Unicode > use(main)
@@ -99,7 +99,7 @@ c ---------------------------
 + '`' > '्'
 
 c ---------------------------
-c SYLLABLE FORMATION (SAFE CONTEXT)
+c SYLLABLE FORMATION
 c ---------------------------
 + context 'क' + 'k' > 'का'
 + context 'ग' + 'k' > 'गा'
@@ -122,11 +122,11 @@ c ---------------------------
 + 'z' > '्र'
 
 c ---------------------------
-c CONJUNCTS
+c CONJUNCTS (FIXED)
 c ---------------------------
-+ context 'त' + '्' + 'र' > 'त्र'
-+ context 'क' + '्' + 'ष' > 'क्ष'
-+ context 'ज' + '्' + 'ञ' > 'ज्ञ'
++ context 'त्' 'र' > 'त्र'
++ context 'क्' 'ष' > 'क्ष'
++ context 'ज्' 'ञ' > 'ज्ञ'
 + 'J' > 'श्र'
 
 c ---------------------------
