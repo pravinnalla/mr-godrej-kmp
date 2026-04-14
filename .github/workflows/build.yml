@@ -4,23 +4,28 @@ on:
   push:
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Install Keyman Compiler
-      run: npm install -g @keymanapp/kmc
+      - name: Install Keyman Developer CLI
+        run: |
+          npm install -g @keymanapp/kmc
 
-    - name: Build keyboard
-      run: |
-        kmc compile mr-godrej.kmn
-        kmc build mr-godrej.kps
+      - name: Build keyboard
+        run: |
+          kmc build .
 
-    - name: Upload KMP
-      uses: actions/upload-artifact@v4
-      with:
-        name: mr-godrej-kmp
-        path: "*.kmp"
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyboard
+          path: |
+            *.kmp
