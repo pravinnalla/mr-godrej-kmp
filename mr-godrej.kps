@@ -11,11 +11,14 @@
     <Keyboard>
       <Name>MR_Godrej_Minimal</Name>
       <ID>mr-godrej</ID>
-      <Filename>mr-godrej.kmx</Filename>
+      <Filename>mr-godrej.kmn</Filename>
     </Keyboard>
   </Keyboards>
 
   <Files>
-    <File>mr-godrej.kmx</File>
+    <File>
+      <Name>mr-godrej.kmn</Name>
+      <Description>Main keyboard source</Description>
+    </File>
   </Files>
 </Package>
