@@ -12,20 +12,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Install Keyman Developer CLI
-        run: |
-          npm install -g @keymanapp/kmc
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
-      - name: Build keyboard
-        run: |
-          kmc build .
+      - name: Install Keyman Compiler
+        run: npm install -g @keymanapp/kmc
 
-      - name: Upload artifact
+      - name: Build Keyboard
+        run: kmc build .
+
+      - name: Upload KMP
         uses: actions/upload-artifact@v4
         with:
-          name: keyboard
-          path: |
-            *.kmp
+          name: mr-godrej-keyboard
+          path: "*.kmp"
