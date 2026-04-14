@@ -1,4 +1,4 @@
-c Minimal Marathi Godrej Keyboard - Clean Stable
+c Minimal Marathi Godrej Keyboard
 
 store(&VERSION) 10.0
 store(&NAME) "MR_Godrej_Minimal"
@@ -8,9 +8,6 @@ begin Unicode > use(main)
 
 group(main) using keys
 
-c --------------------
-c NUMBERS
-c --------------------
 + '1' > U+0967
 + '2' > U+0968
 + '3' > U+0969
@@ -22,18 +19,12 @@ c --------------------
 + '9' > U+096F
 + '0' > U+0966
 
-c --------------------
-c VOWELS
-c --------------------
 + 'a' > 'अ'
 + 'i' > 'इ'
 + 'u' > 'उ'
 + 'e' > 'ए'
 + 'o' > 'ओ'
 
-c --------------------
-c CONSONANTS
-c --------------------
 + 'k' > 'क'
 + 'g' > 'ग'
 + 'c' > 'च'
@@ -51,10 +42,7 @@ c --------------------
 + 's' > 'स'
 + 'h' > 'ह'
 
-c --------------------
-c SYMBOLS
-c --------------------
 + '.' > '।'
++ ',' > ','
 + '-' > '-'
 + '/' > '/'
-+ ',' > ','
