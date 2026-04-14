@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<KeymanPackage format="2.0">
-
+<Package>
   <Info>
-    <Name>Marathi Godrej Remington</Name>
-    <Author>You</Author>
-    <Version>10.0</Version>
+    <Name>MR Godrej Minimal</Name>
+    <Version>1.0</Version>
+    <Description>Minimal Marathi Keyboard Package</Description>
+    <Author>YourName</Author>
   </Info>
 
   <Keyboards>
-    <Keyboard Id="mr-godrej" Filename="mr-godrej.kmx" />
+    <Keyboard>
+      <Name>MR_Godrej_Minimal</Name>
+      <ID>mr-godrej</ID>
+      <Filename>mr-godrej.kmx</Filename>
+    </Keyboard>
   </Keyboards>
 
   <Files>
     <File>mr-godrej.kmx</File>
   </Files>
-
-</KeymanPackage>
+</Package>
