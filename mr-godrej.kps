@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Package>
+<Package xmlns="http://keyman.com/keyboard/8.0" id="mr-godrej">
   <Info>
-    <Name>MR Godrej Minimal</Name>
+    <Name>mr-godrej</Name>
     <Version>1.0</Version>
-    <Description>Minimal Marathi Keyboard Package</Description>
-    <Author>YourName</Author>
   </Info>
 
+  <Files>
+    <File>mr-godrej.kmx</File>
+  </Files>
+
   <Keyboards>
-    <Keyboard>
-      <Name>MR_Godrej_Minimal</Name>
-      <ID>mr-godrej</ID>
-      <Filename>mr-godrej.kmn</Filename>
+    <Keyboard id="mr-godrej">
+      <Name>mr-godrej</Name>
     </Keyboard>
   </Keyboards>
-
-  <Files>
-    <File>
-      <Name>mr-godrej.kmn</Name>
-      <Description>Main keyboard source</Description>
-    </File>
-  </Files>
 </Package>
